@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navegacion-responsive" 
+        class="progress-bar text-bg-danger progress-bar-striped progress-bar-animated"
+        style="width: 100%"
+        role="progressbar">
+      
+      <div class="logo">Menu</div>
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        class="menu-toggle-checkbox"
+        aria-label="Abrir menú"
+      />
+      <label
+        for="menu-toggle"
+        class="menu-toggle"
+        tabindex="0"
+        aria-label="Abrir menú"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+
+    <section class="yo">
+      <section class="yo-content">
+        <h1 class="yo-title">""</h1>
+        <p class="yo-subtitle">
+          Este es solo el inicio de un gran proyecto, espero que les guste
+        </p>
+        </section>
+      </section>
+   
+       <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <h2 class="hero-title">Diseño Web "Anonimacs"</h2>
+        <p class="hero-subtitle">
+          Creamos experiencias web que se adaptan a todos los dispositivos
+        </p>
+        <button class="hero-button">Comenzar Proyecto</button>
+      </div>
+      <div class="hero-image">
+        <img src="./imagen-fondo.webp" alt="Hero Image" />
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios" id="servicios">
+      <div class="container">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="servicios-grid">
+          <div class="servicio-card">
+            <div class="servicio-icon">💻</div>
+            <h3>Desarrollo Web</h3>
+            <p>Sitios web modernos y responsivos</p>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">📱</div>
+            <h3>Apps Móviles</h3>
+            <p>Aplicaciones nativas y híbridas</p>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">🎨</div>
+            <h3>Diseño UI/UX</h3>
+            <p>Experiencias de usuario únicas</p>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">🚀</div>
+            <h3>Optimización SEO</h3>
+            <p>Mejora el posicionamiento web</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="proyectos" id="proyectos">
+      <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="proyectos-grid">
+          <div class="proyecto-card">
+            <img src="./e-commerce.jpg" alt="Proyecto 1" />
+            <div class="proyecto-content">
+              <h3>E-commerce</h3>
+              <p>Tienda online completa</p>
+            </div>
+          </div>
+          <div class="proyecto-card">
+            <img src="./dashboard.jpg" alt="Proyecto 2" />
+            <div class="proyecto-content">
+              <h3>Dashboard</h3>
+              <p>Panel de administración</p>
+            </div>
+          </div>
+          <div class="proyecto-card">
+            <img src="./blog.jpg" alt="Proyecto 3" />
+            <div class="proyecto-content">
+              <h3>Blog</h3>
+              <p>Plataforma de contenido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <ion-icon name="battery-full-outline"></ion-icon>
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+      <div class="container">
+        <h2 class="section-title">Contáctanos</h2>
+        <div class="contacto-content">
+          <div class="contacto-info">
+            <h3>Información de Contacto</h3>
+            <p>📧 christopheraj.labarca@gmail.com</p>
+            <p>📞 +54 11-3360-1605</p>
+            <p>📍 Pais: Grecia</p>
+             <p>📍 Ciudad: Athenas</p>
+          </div>
+          <form class="contacto-form">
+            <input type="text" placeholder="Nombre" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+            <footer class="footer">
+        <p>&copy; 2023 Anonimacs. Todos los derechos reservados.</p>
+        </footer>
+  </body>
+</html>

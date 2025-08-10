@@ -1,14 +1,45 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: 5px;
+  margin: 5px;
   box-sizing: border-box;
 }
 
+@media (max-width: 2560px) {
+  body {
+    img {
+      width: 300px;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+body {
+background-image: url(/imagenes/fondo-japones.jpg);
+  
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--color-texto-principal);
+  line-height: 1.6;
+  scroll-padding-top: var(--header-height);
+}
+
 .container {
-  height: 600px;
+  height: 50vh;
   border: 1px solid red;
   width: 100%;
   margin: 0 auto;
+  height: auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+
+p.description-text {
+  font-family: 'Script MT Bold', cursive;
+  font-size: 1em;
+  line-height: 1em;
+  color: rgb(116, 11, 8); 
 }
 
 
@@ -38,26 +69,34 @@ h1 {
 
 /*boostrap*/
 
-body{
+.body {
   max-width: 100%;
-  display: flex;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
   flex-direction: column;
-  gap: 1rem; /* 1rem = 16px  */
 
+  background-image: url(/imagenes/fondo-japones.jpg);
+  background-size: cover;
  }
 
-
+.text-bg-danger {
+  background-color: red(
+    var(--bs-info-rgb),
+    var(--bs-bg-opacity, 1)
+  );
+}
 
 #carouselExample {
     display: flex;
     justify-content: center;
     align-items: center;
-  width: 70%;
+  width: 60%;
   height: auto;
     margin: 0 auto;
   z-index: 1000;
 }
-@media screen and (min-width: 768px) and (max-width: 2560px) {
+@media screen and (min-width: 340px) and (max-width: 2560px) {
   #carouselExample {
     width: 60%;
     height: auto;
@@ -139,6 +178,101 @@ body{
 .nav a:hover {
   color: #070605;
 }
+
+/*description*/
+
+
+#teloresumo {
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mi-foto {
+    border-radius: 70%;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50vh;
+    height: 50dvh;
+    width: 50vw;
+    width: 50dvh;
+    cursor: pointer;
+    animation: quien-soy 2s ease;
+    padding-top: 3em;
+  }
+  .single-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+
+  .single-card::after {
+    content: "";
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 100%;
+    background: rgba(39, 134, 146, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .single-card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .front {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url(/imagenes/christopher-labarca.jpg);
+    background-size: cover;
+    border-radius: 70%; 
+    text-align: center;
+    
+  }
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background: rgb(36, 30, 30);
+    border-radius: 50%;
+    color: rgb(116, 11, 8);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    font-size: 100%;
+    padding: 20%;
+    font-family: monospace;
+    
+  }
+  .descripcion {
+    width: 45vh;
+    width: 45dvh;
+    text-decoration: dotted;
+    list-style-type: circle;
+    font-size: 0.9em;
+    gap: 0.5em;
+  }
+
+  /* ANIMACIÓN UNDERLINE */
 
 
 
@@ -241,14 +375,14 @@ body{
 
 /* Proyectos Grid */
 .projects {
-  background-color: white;
+  background-color: rgb(7, 6, 6);
 }
 
 
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 2rem;
 }
 
@@ -256,7 +390,7 @@ body{
   width: 80%;
   height: auto;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(119, 209, 119);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -280,13 +414,12 @@ body{
 .project-content h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #2c3e50;
+  color: #5486b8;
 }
 
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 20%, #c8744e 80%);
   opacity: 0.9;
   padding: 4rem 1rem;
   display: flex;
@@ -355,6 +488,11 @@ body{
 .contacto {
   padding: 4rem 1rem;
   gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #207dda;
 }
 
 .servicios {
@@ -369,6 +507,32 @@ body{
 }
 
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  image-resolution: from-image;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+video {
+  width: 50%; /* El video ocupará el 50% del ancho disponible */
+  max-width: 350px; /* Pero no será más grande de 350px */
+  border-radius: 10px; /* Le da bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+  margin: 0 auto; /* Centra el video horizontalmente */
+  display: block; /* Asegura que el video se comporte como un bloque */
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Usando la clase que le asignaste */
+.video-container {
+  margin-top: 20px; /* Agrega un espacio en la parte superior */
+}
 
 
 

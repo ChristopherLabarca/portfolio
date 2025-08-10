@@ -5,10 +5,106 @@
 }
 
 .container {
-  height: 300px;
+  height: 600px;
   border: 1px solid red;
   width: 100%;
   margin: 0 auto;
+  
+/*boostrap*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 1rem = 16px  */
+}
+
+#carouselExample {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 90%;
+  height: auto;
+    margin: 0 auto;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: red;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: rgb(4, 4, 4);
+}
+
+.text-bg-danger {
+  background-color: RGBA(
+    var(--bs-info-rgb),
+    var(--bs-bg-opacity, 1)
+  ) !important;
+}
+
+
+/* Header */
+.header {
+  background-color: #2c3e50;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+   z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-toggler {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggler span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #070605;
+}
+
+
 
 /* Responsive Design */
 @media (min-width: 768px) {
@@ -55,6 +151,11 @@
   }
 }
 
+
+
+
+
+
 /* Menú móvil */
 @media (max-width: 2560px) {
   .menu-toggle {
@@ -62,11 +163,10 @@
   }
 
   .menu {
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0;
     right: 0;
-  background: linear-gradient(135deg, #667eea 20%, #c8744e 80%);
     flex-direction: column;
     padding: 1rem;
     transform: translateY(-100%);
@@ -86,6 +186,9 @@
 
   }
 }
+
+
+
 
 h1 {
   margin: 0 auto;
@@ -108,20 +211,25 @@ h1 {
   background-color: white;
 }
 
+
+
+
+
+
 /* Proyectos Grid */
-.proyectos{
+.projects {
   background-color: white;
 }
 
 
 
-.proyectos-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.proyecto-card {
+.project-card {
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
@@ -129,25 +237,113 @@ h1 {
   transition: all 0.3s ease;
 }
 
-.proyecto-card:hover {
+.project-card:hover {
   transform: translateY(-5px);
 }
 
-.proyecto-card img {
+.project-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.proyecto-content {
+.project-content {
   padding: 1.5rem;
 }
 
-.proyecto-content h3 {
+.project-content h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   color: #2c3e50;
 }
+
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea 20%, #c8744e 80%);
+  opacity: 0.9;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.hero-button {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: linear-gradient(135deg, #d80c0c 20%, #c232de 80%);
+  transform: translateY(-2px);
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Secciones */
+
+
+.servicio-card,
+.proyecto-card {
+  opacity: 1;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.servicios,
+.proyectos,
+.contacto {
+  padding: 4rem 1rem;
+}
+
+.servicios {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+
+
+
 
 /* Contacto */
 .contacto {
@@ -210,6 +406,38 @@ h1 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* como usar github # Inicializar repositorio
 git init
 
@@ -230,6 +458,41 @@ git log --oneline
 # Ver diferencias
 git diff
 git diff archivo.html
+
+# Crear nueva rama
+git branch nueva-funcionalidad
+
+# Cambiar a una rama
+git checkout nueva-funcionalidad
+git switch nueva-funcionalidad  # Comando más moderno
+
+# Crear y cambiar a nueva rama
+git checkout -b nueva-funcionalidad
+
+# Ver todas las ramas
+git branch
+
+# Fusionar rama con main
+git checkout main
+git merge nueva-funcionalidad
+
+# Eliminar rama
+git branch -d nueva-funcionalidad
+
+# Clonar repositorio
+git clone https://github.com/usuario/repositorio.git
+
+# Agregar repositorio remoto
+git remote add origin https://github.com/usuario/repositorio.git
+
+# Enviar cambios al repositorio remoto
+git push origin main
+
+# Obtener cambios del repositorio remoto
+git pull origin main
+
+# Ver repositorios remotos
+git remote -v
 
 profe no me queme xD me vivo olvidando como usarlo */
 

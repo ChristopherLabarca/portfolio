@@ -64,11 +64,17 @@
 
     <main>
       <h1>Hello, world!</h1>
-      <section id="description"><div class="container"></div></section>
+      <section id="description"><div class="container">
+        <p>Descripción de la sección.</p>
+        <img id="description-image" src="/imagenes/yo.jpg" alt="Este soy yo" width="300px" height="auto" />
+      </div>
+
+      </section>
 
 
 
       <section id="skills"><div class="container">
+        <h2>this a carousel</h2>
           <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -93,8 +99,9 @@
           />
         </div>
         <div class="carousel-item">
-          <img src="https://picsum.photos/seed/picsum/200/300"
-           class="d-block w-100" alt="..." />
+          <img src="/imagenes/imagen-fondo.webp"
+            srcset="/imagenes/imagen-fondo.webp 1x, /imagenes/imagen-fondo@2x.webp 2x"
+            class="d-block w-100" alt="..." />
         </div>
       </div>
       <button
@@ -167,8 +174,8 @@
               <p>📞 +54 11-3360-1605</p>
               <p>📍 Pais: Grecia</p>
               <p>📍 Ciudad: Athenas</p>
-                <p>📍 Portfolio: https://github.com/ChristopherLabarca/portfolio.git</p>
-                <p >📍 LinkedIn: https://www.linkedin.com/in/christopher-labarca-a5976932b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app </p>
+                <p>📍 Portfolio: <a href="https://github.com/ChristopherLabarca/portfolio.git">https://github.com/ChristopherLabarca/portfolio.git</a></p>
+                <p>📍 LinkedIn: <a href="https://www.linkedin.com/in/christopher-labarca-a5976932b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Christopher Labarca</a></p>
             </div>
             <form class="contacto-form">
               <input type="text" placeholder="Nombre" required />

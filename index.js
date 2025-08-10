@@ -14,3 +14,10 @@ anchors.forEach((a) => {
     buttonNavbar.click(); // le indico que tiene que hacer click sobre el buttonNavbar
   });
 });
+
+
+window.addEventListener('load', function() {
+    // Cuando todo el contenido ha cargado, oculta el loader
+    const loader = document.getElementById('loader-container');
+    loader.style.display = 'none';
+});

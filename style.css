@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+#loader-container {
+  min-width: 100vw; /* Ancho completo de la ventana */
+  min-height: 100vh; /* Alto completo de la ventana */
+    position: fixed; /* Esto lo fija en la pantalla */
+    top: 50%;
+    left: 50%; /* Centrado */
+    transform: translate(-50%, -50%); /* Centrado */
+    width: auto;
+    height: auto;
+    display: flex; /* Para centrar el contenido fácilmente */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    z-index: 9999; /* Asegura que esté por encima de todo */
+}
+
+
+
+
+
+
 @media (max-width: 2560px) {
   body {
     img {
@@ -25,10 +45,10 @@ background-image: url(/imagenes/fondo-japones.jpg);
 }
 
 .container {
-  height: 50vh;
-  border: 1px solid red;
+  height: 60vh;
+  border: 5px solid rgb(14, 13, 13);
   width: 100%;
-  margin: 0 auto;
+  margin:0 auto;
   height: auto;
   padding: 2rem;
   gap: 2rem;
@@ -47,10 +67,11 @@ p.description-text {
 h1 {
   margin: 0 auto;
   width: fit-content;
+  color: white
 }
 
 #description {
-  background-color: white;
+  background-color: transparent;
 }
 #skills {
   background-color: white;
@@ -202,7 +223,7 @@ h1 {
     width: 50vw;
     width: 50dvh;
     cursor: pointer;
-    animation: quien-soy 2s ease;
+    animation:  2s ease;
     padding-top: 3em;
   }
   .single-card {
@@ -221,9 +242,9 @@ h1 {
     transform: translate(-50%, -50%);
     width: 120%;
     height: 100%;
-    background: rgba(39, 134, 146, 0.1);
+    background: rgba(129, 218, 230, 0.527);
     border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(187, 174, 174, 0.521);
     pointer-events: none;
     z-index: -1;
   }
@@ -248,9 +269,9 @@ h1 {
     height: 100%;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    background: rgb(36, 30, 30);
+    background: rgb(214, 198, 198);
     border-radius: 50%;
-    color: rgb(116, 11, 8);
+    color: rgb(24, 14, 13);
     text-align: center;
 
     display: flex;
@@ -272,8 +293,19 @@ h1 {
     gap: 0.5em;
   }
 
-  /* ANIMACIÓN UNDERLINE */
-
+.musica {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  background-color: rgba(169, 177, 68, 0.89);
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  color: rgb(15, 7, 17) ;
+}
 
 
 /* Responsive Design */
@@ -468,7 +500,7 @@ h1 {
 /* Secciones */
 
 
-.servicio-card,
+.servicios-card,
 .proyecto-card {
   opacity: 1;
   transform: translateY(30px);
@@ -495,8 +527,13 @@ h1 {
   background-color: #207dda;
 }
 
+.section-description {
+  font-size: 1.1rem;
+text-align: center;
+}
+
 .servicios {
-  background-color: #f8f9fa;
+  background-color: #999da0;
 }
 
 .section-title {
@@ -507,16 +544,27 @@ h1 {
 }
 
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.servicios-grid {
+display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
   gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+}
+
+.servicios-card {
   image-resolution: from-image;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
+  width: 300px;
+  height: auto;
+
+
+
+  background-color: rgb(98, 47, 114);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 video {
@@ -684,6 +732,10 @@ git pull origin main
 
 # Ver repositorios remotos
 git remote -v
+
+
+(git init, git status, git add . , git commit -m "mensaje" y git push origin main) es lo que debo usar siempre
+para subir los cambios al repositorio remoto.
 
 profe no me queme xD me vivo olvidando como usarlo */
 

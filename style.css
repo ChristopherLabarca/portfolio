@@ -45,7 +45,7 @@ background-image: url(/imagenes/fondo-japones.jpg);
 }
 
 .container {
-  height: 60vh;
+  height: 100vh;
   border: 5px solid rgb(14, 13, 13);
   width: 100%;
   margin:0 auto;
@@ -89,6 +89,7 @@ h1 {
 
 
 /*boostrap*/
+@media screen and (min-width: 320px) and (max-width: 2560px) {
 
 .body {
   max-width: 100%;
@@ -107,6 +108,7 @@ h1 {
     var(--bs-bg-opacity, 1)
   );
 }
+}
 
 #carouselExample {
     display: flex;
@@ -117,7 +119,7 @@ h1 {
     margin: 0 auto;
   z-index: 1000;
 }
-@media screen and (min-width: 340px) and (max-width: 2560px) {
+@media screen and (min-width: 320px) and (max-width: 2560px) {
   #carouselExample {
     width: 60%;
     height: auto;
@@ -299,7 +301,7 @@ h1 {
   align-items: center;
   text-align: center;
   background-color: rgba(169, 177, 68, 0.89);
-  width: 100%;
+  width:100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -309,7 +311,7 @@ h1 {
 
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (min-width: 320px) and (max-width: 1023px) {
   .container {
     padding: 0 2rem;
   }
@@ -585,8 +587,11 @@ video {
 
 
 /* Contacto */
-.contacto {
+@media screen and (min-width: 320px) and (max-width: 2560px) {
+
+.contact {
   background-color: #f8f9fa;
+}
 }
 
 .contacto-content {
@@ -607,9 +612,11 @@ video {
 }
 
 .contacto-form {
+  width: 50vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  text-align: center;
 }
 
 .contacto-form input,

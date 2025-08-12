@@ -35,7 +35,7 @@
 }
 
 body {
-background-image: url(/imagenes/fondo-japones.jpg);
+background-image: url(./imagenes/fondo-japones.jpg);
   
   background-attachment: fixed;
   background-size: cover;
@@ -98,7 +98,7 @@ h1 {
   padding: 0;
   flex-direction: column;
 
-  background-image: url(/imagenes/fondo-japones.jpg);
+  background-image: url(./imagenes/fondo-japones.jpg);
   background-size: cover;
  }
 
@@ -259,7 +259,7 @@ h1 {
     width: 80%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url(/imagenes/christopher-labarca.jpg);
+    background-image: url(./imagenes/christopher-labarca.jpg);
     background-size: cover;
     border-radius: 70%; 
     text-align: center;
